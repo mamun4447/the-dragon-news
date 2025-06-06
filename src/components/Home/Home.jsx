@@ -1,4 +1,8 @@
+import { Outlet } from "react-router-dom";
+import NavBar from "../common/NavBar";
 import LatestNews from "./LatestNews";
+import LeftNavBar from "./LeftNavBar";
+import RightNavBar from "./RightNav/RightNavBar";
 
 const Home = () => {
   return (
@@ -6,7 +10,18 @@ const Home = () => {
       <section className="my-7">
         <LatestNews />
       </section>
-      <h1>Home</h1>
+      <NavBar />
+      <main className="grid grid-cols-4">
+        <div className="col-span-1">
+          <LeftNavBar />
+        </div>
+        <div className="col-span-2">
+          <Outlet />
+        </div>
+        <div className="col-span-1">
+          <RightNavBar />
+        </div>
+      </main>
     </div>
   );
 };
