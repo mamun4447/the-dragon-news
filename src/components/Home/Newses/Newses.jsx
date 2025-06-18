@@ -1,6 +1,5 @@
 import { useLoaderData } from "react-router-dom";
 import News from "./News";
-
 const Newses = () => {
   const { data } = useLoaderData();
 
@@ -11,8 +10,8 @@ const Newses = () => {
         {data.length} News Found In This Category
       </p>
       <div>
-        {data.map((news) => (
-          <News key={news._id} news={news} />
+        {data?.map((news) => (
+          <News key={news?._id} news={news} />
         ))}
       </div>
     </div>

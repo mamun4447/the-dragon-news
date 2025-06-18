@@ -5,6 +5,7 @@ import LeftNavBar from "./LeftNavBar";
 import RightNavBar from "./RightNav/RightNavBar";
 
 const Home = () => {
+  // console.log(news);
   return (
     <div className="md:w-[1140px] grid mx-auto mt-2">
       <section className="my-7">
